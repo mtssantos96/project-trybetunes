@@ -48,7 +48,7 @@ class Search extends Component {
     const { userSearch, artist, artistAlbums, artistFound, isLoading } = this.state;
     if (isLoading) return <div className={ styles.loading }><Loading /></div>;
     return (
-      <>
+      <div className={ styles.searchPage }>
         <Header />
         <section data-testid="page-search" className={ styles.searchContaier }>
           <form className={ styles.searchForm } role="search">
@@ -82,7 +82,7 @@ class Search extends Component {
             </main>
           )}
         </section>
-      </>
+      </div>
     );
   }
 }

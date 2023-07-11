@@ -10,7 +10,7 @@
 
   --white: #FAFAF6;
 
-  --white-95: hsl(0, 0%, 95%);
+  --white-95: #f2f2f2;
 
   --grey: #ACAFB3;
 
@@ -23,6 +23,8 @@
   --green: #2D7A5F;
 
   --dark-green: #05352E;
+
+  --red: #f35b5b;
 
   --shadow: #0001 0 0.2rem 0.4rem 0.1rem;
 

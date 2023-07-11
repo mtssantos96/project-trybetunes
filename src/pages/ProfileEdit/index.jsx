@@ -91,7 +91,7 @@ class ProfileEdit extends Component {
         >
           <div className={ styles.categoryHeader }><h2>Editar perfil</h2></div>
           {isLoading ? (
-            <Loading />
+            <div className={ styles.loading }><Loading /></div>
           ) : (
             <div className={ styles.profile }>
               <div className={ styles.profilePic }>

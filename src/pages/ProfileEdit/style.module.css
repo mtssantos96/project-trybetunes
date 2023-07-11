@@ -114,3 +114,9 @@
   cursor: pointer;
   transform: scale(1.05);
 }
+
+.loading {
+  background-color: var(--white-95);
+  margin-top: 2rem;
+  width: 100%;
+}

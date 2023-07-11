@@ -45,7 +45,7 @@
 
 .heartFill {
   cursor: pointer;
-  fill: rgb(243, 91, 91);
+  fill: var(--red);
   height: 20px;
   transition: ease-in-out 0.5s;
   width: 20px;

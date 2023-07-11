@@ -76,7 +76,7 @@ class Album extends Component {
                 </div>
               </div>
               <div className={ styles.songs }>
-                {loadingFav ? <Loading /> : (
+                {loadingFav ? <div className={ styles.loading }><Loading /></div> : (
                   <>
                     {album.slice(1).map((song) => (
                       <MusicCard

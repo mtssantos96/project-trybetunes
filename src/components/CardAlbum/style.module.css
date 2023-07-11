@@ -21,6 +21,14 @@
   width: 80%;
 }
 
+.artistSearch p {
+  color: var(--green);
+}
+
+.artistSearch p strong {
+  color: var(--dark-green);
+}
+
 .albums {
   display: flex;
   flex-wrap: wrap;

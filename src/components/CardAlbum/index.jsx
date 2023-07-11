@@ -9,7 +9,14 @@ class CardAlbum extends Component {
     return (
       <div className={ styles.cardContaier }>
         <div className={ styles.artistSearch }>
-          <p>{ `Resultado de álbuns de: ${artist}` }</p>
+          <p>
+            {' '}
+            Resultado de álbuns de:
+            {' '}
+            <strong>
+              {artist}
+            </strong>
+          </p>
         </div>
         <div className={ styles.albums }>
           { albums.map(

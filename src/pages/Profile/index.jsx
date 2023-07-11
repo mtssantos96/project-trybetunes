@@ -57,7 +57,7 @@ class Profile extends Component {
         >
           <div className={ styles.categoryHeader }><h2>Perfil</h2></div>
           {isLoading ? (
-            <Loading />
+            <div className={ styles.loading }><Loading /></div>
           ) : (
             <section className={ styles.profile }>
               <div
