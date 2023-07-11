@@ -1,13 +1,25 @@
 .logoContainer {
-  align-items: center;
+  align-items: flex-end;
   color: var(--dark-grey);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.logoContainer svg {
+.logoContainer div {
+  display: flex;
+  font-weight: 600;
+  gap: 0.2rem;
+  justify-content: center;
+}
+
+.logoContainer div svg {
   fill: var(--light-green);
-  height: 30%;
-  width: 30%;
+  font-size: 2.5rem;
+}
+
+.logoContainer p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: -1rem;
 }

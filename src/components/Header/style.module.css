@@ -24,13 +24,12 @@
 }
 
 /* Logo do app */
-.logo.logoContainer {
-  width: 50%;
-}
-
 .logo h1 {
   color: var(--white-95);
-  font-size: 1.5rem;
+}
+
+.logo p {
+  color: var(--white-95);
 }
 
 /* Container das informações do usuário */
