@@ -1,0 +1,13 @@
+.logoContainer {
+  align-items: center;
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logoContainer svg {
+  fill: var(--light-green);
+  height: 30%;
+  width: 30%;
+}

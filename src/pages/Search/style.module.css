@@ -1,0 +1,107 @@
+/* Container da página */
+.searchContaier {
+  align-items: center;
+  background-color: var(--white-95);
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Container do Form */
+.searchForm {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 80%;
+}
+
+/* Label do input de texto */
+.searchForm label {
+  align-items: center;
+  background-color: var(--white-95);
+  border: 2px solid var(--grey);
+  border-radius: 0.25rem;
+  color: var(--dark-grey);
+  display: flex;
+  flex: 2;
+  gap: 0.5rem;
+  max-width: 30rem;
+  padding: 0.5rem;
+  transition: ease-in-out 0.1s;
+}
+
+.searchForm label:hover {
+  box-shadow: var(--shadow);
+  transform: scale(1.05);
+}
+
+.searchForm label:focus-within {
+  background-color: var(--white);
+  border: 2px solid var(--dark-grey);
+  box-shadow: 0 0 0 10rem var(--white-95) inset , var(--shadow);
+  transform: scale(1.05);
+}
+
+/* Input de texto */
+.searchForm input {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-grey);
+  height: 100%;
+  width: 100%;
+}
+
+.searchForm input:focus, .searchForm input:hover {
+  outline: none;
+}
+
+.searchForm input:-webkit-autofill {
+  box-shadow: 0 0 0 10rem var(--white-95) inset;
+  -webkit-text-fill-color: inherit;
+}
+
+/* Icone da react-icons/bi */
+.searchForm label svg {
+  fill: var(--grey);
+  height: 1.2rem;
+  margin: auto;
+  width: 1.2rem;
+}
+
+/* Botão de busca */
+.searchForm button {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 0.25rem;
+  color: var(--white);
+  filter: opacity(100%);
+  padding: 0.25rem 1rem;
+  transition: ease-in-out 0.1s;
+}
+
+.searchForm button:disabled {
+  filter: opacity(40%);
+}
+
+.searchForm button:enabled:hover, .searchForm button:enabled:focus {
+  border: 2px solid var(--blue);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Carregamento */
+.loading {
+  min-height: 3rem;
+}
+
+/* Album não encontrado */
+.albumNotFound {
+  color: var(--dark-green);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  text-align: center;
+}

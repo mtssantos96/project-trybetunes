@@ -1,0 +1,46 @@
+.loadContainer {
+  align-items: center;
+  background-color: var(--white-95);
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.loadContainer svg {
+  animation: spin 1.5s infinite linear , fade 1s infinite alternate;
+  height: 2rem;
+  width: 2rem;
+}
+
+.loadContainer p {
+  animation: fade 1s infinite alternate;
+  font-size: 2rem;
+}
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,146 @@
+/* Container do componente */
+.HeaderContainer {
+  align-items: stretch;
+  background-color: var(--white-95);
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 4rem;
+  width: 100%;
+}
+
+/* Container da parte superior do Header */
+.headerTop {
+  align-items: center;
+  background-color: var(--dark-green);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+  min-height: 1em;
+  padding: 1rem 2rem;
+  z-index: 4;
+}
+
+/* Logo do app */
+.logo.logoContainer {
+  width: 50%;
+}
+
+.logo h1 {
+  color: var(--white-95);
+  font-size: 1.5rem;
+}
+
+/* Container das informações do usuário */
+.userInfo {
+  align-items: center;
+  background-color: var(--white-95);
+  border: 0.2rem solid var(--white-95);
+  border-radius: 40rem;
+  color: var(--white-95);
+  display: flex;
+  justify-content: space-between;
+  min-height: 3rem;
+  min-width: 8rem;
+}
+
+.linkImage {
+  align-items: center;
+  background-color: var(--light-green);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  max-height: 5rem;
+  max-width: 5rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  overflow: hidden;
+}
+
+.userImage {
+  max-height: 3rem;
+  max-width: 3rem;
+}
+
+.linkImage svg {
+  fill: var(--dark-green);
+  height: 100%;
+  width: 100%;
+}
+
+.linkName {
+  color: var(--dark-green);
+  font-weight: 600;
+  margin: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Container dos links de navegação */
+.links {
+  align-items: center;
+  box-shadow: var(--shadow);
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  width: 100%;
+  z-index: 5;
+}
+
+/* Opições de navegação */
+.link {
+  background-color: var(--white-95);
+  border: 2px solid var(--white-95);
+  color: var(--dark-green);
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+  width: 100%;
+  z-index: 2;
+}
+
+.link:hover {
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  box-shadow: var(--shadow);
+  color: var(--green);
+  z-index: 0;
+}
+
+/* Página atualmente ativa */
+.linkActive {
+  background-color: var(--dark-green);
+  border: 2px solid var(--dark-green);
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: var(--shadow-2);
+  color: var(--light-green);
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  z-index: 3;
+}
+
+.linkActive:hover {
+  cursor: default;
+}
+
+/* Ajuste para tela maoires que 546px */
+
+@media screen and ( min-width : 546px ) {
+
+  .headerTop {
+    justify-content: space-between;
+  }
+}
+
+.loading {
+  background-color: var(--white-95);
+  min-height: 3rem;
+  padding: 3rem;
+}
