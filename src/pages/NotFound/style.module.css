@@ -1,0 +1,111 @@
+.notFound {
+  align-items: center;
+  background-color: var(--white-95);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in infinite alternate;
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0.4;
+  }
+}
+
+@keyframes wiggle {
+
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+
+  15% {
+    transform: rotateZ(-15deg);
+  }
+
+  20% {
+    transform: rotateZ(10deg);
+  }
+
+  25% {
+    transform: rotateZ(-10deg);
+  }
+
+  30% {
+    transform: rotateZ(6deg);
+  }
+
+  35% {
+    transform: rotateZ(-4deg);
+  }
+
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+.notFound div {
+  align-items: center;
+  animation: fadeIn 2s ease-in infinite alternate;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notFound p {
+  color: var(--grey);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.notFound h1 {
+  color: var(--red);
+  font-size: 6rem;
+  line-height: 4rem;
+}
+
+.notFound svg {
+  color: var(--red);
+  font-size: 6rem;
+}
+
+.notFound a {
+  text-decoration: none;
+}
+
+.goBack {
+  align-items: center;
+  animation: wiggle 2s linear infinite;
+  background-color: var(--blue);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.goBack p {
+  color: var(--white-95);
+  font-weight: 600;
+}
+
+.goBack svg {
+  fill: var(--white-95);
+  font-size: 2rem;
+}

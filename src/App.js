@@ -19,7 +19,7 @@ class App extends React.Component {
         <Route exact path="/profile" component={ Profile } />
         <Route exact path="/profile/edit" component={ ProfileEdit } />
         <Route exact path="/search" component={ Search } />
-        <Route component={ NotFound } />
+        <Route path="*" component={ NotFound } />
       </Switch>
     );
   }
