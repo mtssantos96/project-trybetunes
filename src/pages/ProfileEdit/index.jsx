@@ -130,7 +130,7 @@ class ProfileEdit extends Component {
                     name="email"
                     type="text"
                     maxLength="64"
-                    placeholder="usuario@usuario.com"
+                    placeholder="usuario@email.com"
                     value={ email }
                     onChange={ this.handleChange }
                     data-testid="edit-input-email"
