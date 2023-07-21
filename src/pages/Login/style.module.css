@@ -10,12 +10,20 @@
 
 .loginContainer form {
   background-color: var(--white);
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   margin: 5rem;
   padding: 5rem;
+}
+
+@media screen and ( max-width : 412px ) {
+
+  .loginContainer form {
+    margin: 2rem;
+    padding: 2rem;
+  }
 }
 
 .loginContainer input {

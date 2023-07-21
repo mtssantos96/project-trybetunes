@@ -49,7 +49,7 @@ class Login extends Component {
             <input
               id="name-input"
               type="text"
-              placeholder="Name"
+              placeholder="Nome"
               data-testid="login-name-input"
               onChange={ this.handleChange }
             />
