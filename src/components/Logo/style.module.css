@@ -1,9 +1,9 @@
 .logoContainer {
   align-items: flex-end;
-  color: var(--dark-grey);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  user-select: none;
 }
 
 .logoContainer div {

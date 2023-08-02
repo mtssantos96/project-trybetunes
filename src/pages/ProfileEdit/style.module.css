@@ -73,6 +73,7 @@
   color: var(--green);
   font-weight: 600;
   text-align: start;
+  user-select: none;
   width: 100%;
 }
 
@@ -80,7 +81,7 @@
   background-color: var(--white-95);
   border: 2px solid var(--grey);
   border-radius: 0.25rem;
-  color: var(--dark-grey);
+  color: var(--gray-700);
   margin-top: 0.5rem;
   padding: 0.25rem;
   transition: ease-in-out 0.1s;
@@ -106,9 +107,21 @@
   padding: 0.5rem;
   text-decoration: none;
   transition: ease-in-out 0.1s;
+  user-select: none;
 }
 
-.profileForm button:hover, .profileForm button:focus {
+.profileForm button:disabled {
+  filter: opacity(40%);
+}
+
+.profileForm button:hover:not( :disabled ) {
+  border: 2px solid var(--blue);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.profileForm button:focus:not( :disabled ) {
   border: 2px solid var(--blue);
   box-shadow: var(--shadow);
   cursor: pointer;

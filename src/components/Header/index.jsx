@@ -89,21 +89,21 @@ class Header extends Component {
                 <Link
                   data-testid="link-to-search"
                   to="/search"
-                  className={ this.getLinkClassName('/search') }
+                  className={ this.getLinkClassName('search') }
                 >
                   <li>Busca</li>
                 </Link>
                 <Link
                   data-testid="link-to-favorites"
                   to="/favorites"
-                  className={ this.getLinkClassName('/favorites') }
+                  className={ this.getLinkClassName('favorites') }
                 >
                   <li>Curtidas</li>
                 </Link>
                 <Link
                   data-testid="link-to-profile"
                   to="/profile"
-                  className={ this.getLinkClassName('/profile') }
+                  className={ this.getLinkClassName('profile') }
                 >
                   <li>Perfil</li>
                 </Link>

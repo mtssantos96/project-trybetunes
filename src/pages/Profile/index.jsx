@@ -66,9 +66,18 @@ class Profile extends Component {
                 {this.renderUserImage(image, name)}
               </div>
               <div className={ styles.profileInfo }>
-                <h3>{name}</h3>
-                <p>{email}</p>
-                <p>{description}</p>
+                <div className={ styles.divInfo }>
+                  { name ? <p className={ styles.titleInfo }>Nome</p> : '' }
+                  <p className={ styles.name }>{name}</p>
+                </div>
+                <div className={ styles.divInfo }>
+                  { email ? <p className={ styles.titleInfo }>E-mail</p> : '' }
+                  <p className={ styles.email }>{email}</p>
+                </div>
+                <div className={ styles.divInfo }>
+                  { description ? <p className={ styles.titleInfo }>Descrição</p> : '' }
+                  <p className={ styles.description }>{description}</p>
+                </div>
               </div>
               <Link to="/profile/edit" className={ styles.editProfile }>
                 Editar perfil

@@ -63,19 +63,31 @@
 }
 
 .profileInfo {
-  align-items: center;
+  align-items: start;
   color: var(--dark-green);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 70%;
 }
 
-.profileInfo h3 {
+.divInfo {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.profileInfo .titleInfo {
   color: var(--green);
   font-weight: 600;
-  margin: 0 1rem;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
+}
+
+.description, .name, .email {
+  color: var(--gray-700);
+  text-align: left;
 }
 
 .editProfile {

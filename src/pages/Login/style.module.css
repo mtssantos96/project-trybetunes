@@ -59,7 +59,8 @@
 }
 
 .loginContainer button:enabled:hover, .loginContainer button:enabled:focus {
-  border: 2px solid var(--blue);
+  background-color: var(--light-blue);
+  border: 2px solid var(--light-blue);
   box-shadow: var(--shadow);
   cursor: pointer;
   transform: scale(1.05);

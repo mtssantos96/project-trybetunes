@@ -1,7 +1,7 @@
 .loadContainer {
   align-items: center;
   background-color: var(--white-95);
-  color: var(--dark-grey);
+  color: var(--gray-700);
   display: flex;
   flex-direction: column;
   justify-content: center;
