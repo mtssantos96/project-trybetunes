@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { BiSearch } from 'react-icons/bi';
+import * as Yup from 'yup';
 
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import Loading from '../../components/Loading';
 import CardAlbum from '../../components/CardAlbum';
 import Header from '../../components/Header';
 import styles from './style.module.css';
+
+const minLength = 3;
+const searchSchema = Yup.object().shape({
+  userSearch: Yup.string().min(minLength).required(),
+});
 
 class Search extends Component {
   constructor() {
@@ -25,7 +31,7 @@ class Search extends Component {
     });
   };
 
-  handleClick = () => {
+  handleSearch = async () => {
     const { userSearch } = this.state;
     this.setState(
       {
@@ -44,6 +50,18 @@ class Search extends Component {
     );
   };
 
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const { userSearch } = this.state;
+
+    try {
+      await searchSchema.validate({ userSearch }, { abortEarly: false });
+      this.handleSearch();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   render() {
     const { userSearch, artist, artistAlbums, artistFound, isLoading } = this.state;
     if (isLoading) return <div className={ styles.loading }><Loading /></div>;
@@ -51,7 +69,11 @@ class Search extends Component {
       <div className={ styles.searchPage }>
         <Header />
         <section data-testid="page-search" className={ styles.searchContaier }>
-          <form className={ styles.searchForm } role="search">
+          <form
+            className={ styles.searchForm }
+            role="search"
+            onSubmit={ this.handleSubmit }
+          >
             <label htmlFor="search-artist">
               <input
                 type="text"
@@ -64,10 +86,9 @@ class Search extends Component {
               <BiSearch />
             </label>
             <button
-              type="button"
+              type="submit"
               data-testid="search-artist-button"
-              disabled={ userSearch.length < 2 }
-              onClick={ this.handleClick }
+              disabled={ userSearch.length < minLength }
             >
               Buscar
             </button>

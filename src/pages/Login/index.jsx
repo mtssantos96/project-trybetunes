@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-
+import * as Yup from 'yup';
 import Loading from '../../components/Loading/index';
 import Logo from '../../components/Logo/index';
 import { createUser } from '../../services/userAPI';
 import styles from './style.module.css';
+
+const minLength = 3;
+const loginSchema = Yup.object().shape({
+  username: Yup.string().min(minLength).required(),
+});
 
 class Login extends Component {
   constructor() {
@@ -18,21 +23,28 @@ class Login extends Component {
   }
 
   handleChange = ({ target }) => {
-    const MIN_CHAR_LENGTH = 3;
     this.setState({
       username: target.value,
-      isLoginDisabled: target.value.length < MIN_CHAR_LENGTH,
+      isLoginDisabled: target.value.length < minLength,
     });
   };
 
-  loadUserInfo = async () => {
+  handleSubmit = async (event) => {
+    event.preventDefault();
     const { username } = this.state;
     this.setState({ isLoading: true });
-    await createUser({ name: username });
-    this.setState({
-      isLoading: false,
-      isLoadingFinished: true,
-    });
+
+    try {
+      await loginSchema.validate({ username }, { abortEarly: false });
+      await createUser({ name: username });
+      this.setState({
+        isLoading: false,
+        isLoadingFinished: true,
+      });
+    } catch (error) {
+      console.error(error);
+      this.setState({ isLoading: false });
+    }
   };
 
   render() {
@@ -44,7 +56,7 @@ class Login extends Component {
         <div className={ styles.logo }>
           <Logo />
         </div>
-        <form>
+        <form onSubmit={ this.handleSubmit }>
           <label htmlFor="name-input">
             <input
               id="name-input"
@@ -55,10 +67,9 @@ class Login extends Component {
             />
           </label>
           <button
-            type="button"
+            type="submit"
             data-testid="login-submit-button"
             disabled={ isLoginDisabled }
-            onClick={ this.loadUserInfo }
           >
             Entrar
           </button>
