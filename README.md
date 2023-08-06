@@ -2,7 +2,7 @@
 
 ## Projeto Final
 
-![Trybetunes](./src/assets/projeto/01.png)
+![Trybetunes](./src/assets/trybetunes.png)
 
 ## Descrição do Projeto
 
@@ -65,6 +65,6 @@ Se você quiser contribuir para o desenvolvimento deste projeto, sinta-se à von
 
 Esse é o protótipo do esperado do projeto (protótipo criado pela [Trybe](https://www.betrybe.com/)):
 
-![protótipo](./src/assets/prototipo/01.png)
+![protótipo](./src/assets/protótipo.png)
 
 # Obrigado pela visita :blue_heart:
