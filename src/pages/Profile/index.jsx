@@ -51,14 +51,15 @@ class Profile extends Component {
     return (
       <div className={ styles.profilePage }>
         <Header />
-        <section
-          data-testid="page-profile"
-          className={ styles.profileContainer }
-        >
-          <div className={ styles.categoryHeader }><h2>Perfil</h2></div>
-          {isLoading ? (
-            <div className={ styles.loading }><Loading /></div>
-          ) : (
+        {isLoading ? (
+          <div className={ styles.loading }><Loading /></div>
+        ) : (
+
+          <section
+            data-testid="page-profile"
+            className={ styles.profileContainer }
+          >
+            <div className={ styles.categoryHeader }><h2>Perfil</h2></div>
             <section className={ styles.profile }>
               <div
                 className={ styles.profilePic }
@@ -83,8 +84,8 @@ class Profile extends Component {
                 Editar perfil
               </Link>
             </section>
-          )}
-        </section>
+          </section>
+        )}
       </div>
     );
   }

@@ -48,11 +48,11 @@ class Favorites extends Component {
     return (
       <div className={ styles.favoritesCountainer }>
         <Header />
-        <section className={ styles.favorites } data-testid="page-favorites">
-          <div className={ styles.categoryHeader }>
-            <h2>Suas curtidas</h2>
-          </div>
-          { isLoading ? <Loading /> : (
+        { isLoading ? <div className={ styles.loading }><Loading /></div> : (
+          <section className={ styles.favorites } data-testid="page-favorites">
+            <div className={ styles.categoryHeader }>
+              <h2>Suas curtidas</h2>
+            </div>
             <div className={ styles.favCountainer }>
               {favoriteSongs.length === 0 ? (
                 <h2>Você não tem nenhuma curtida!</h2>
@@ -67,8 +67,8 @@ class Favorites extends Component {
                 ))
               )}
             </div>
-          )}
-        </section>
+          </section>
+        )}
       </div>
     );
   }

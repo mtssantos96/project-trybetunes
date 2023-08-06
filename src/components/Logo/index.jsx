@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BiHeadphone } from 'react-icons/bi';
 import styles from './style.module.css';
 
-class Logo extends Component {
+export default class Logo extends Component {
   render() {
     return (
       <div className={ styles.logoContainer }>
@@ -15,5 +15,3 @@ class Logo extends Component {
     );
   }
 }
-
-export default Logo;

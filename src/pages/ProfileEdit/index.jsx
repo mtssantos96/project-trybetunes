@@ -134,11 +134,14 @@ export default class ProfileEdit extends Component {
     return (
       <div className={ styles.profilePage }>
         <Header />
-        <section data-testid="page-profile-edit" className={ styles.profileContainer }>
-          <div className={ styles.categoryHeader }><h2>Editar perfil</h2></div>
-          {isLoading
-            ? <div className={ styles.loading }><Loading /></div>
-            : (
+        {isLoading
+          ? <div className={ styles.loading }><Loading /></div>
+          : (
+            <section
+              data-testid="page-profile-edit"
+              className={ styles.profileContainer }
+            >
+              <div className={ styles.categoryHeader }><h2>Editar perfil</h2></div>
               <div className={ styles.profile }>
                 <div className={ styles.imgProfileContainer }>
                   <label htmlFor="edit-image" className={ styles.editImage }>
@@ -213,8 +216,8 @@ export default class ProfileEdit extends Component {
                   </button>
                 </form>
               </div>
-            )}
-        </section>
+            </section>
+          )}
       </div>
     );
   }

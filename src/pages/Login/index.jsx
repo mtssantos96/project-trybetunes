@@ -53,9 +53,7 @@ class Login extends Component {
     return (
       <div className={ styles.loginContainer } data-testid="page-login">
         {isLoadingFinished && <Redirect to="/search" />}
-        <div className={ styles.logo }>
-          <Logo />
-        </div>
+        <Logo />
         <form onSubmit={ this.handleSubmit }>
           <label htmlFor="name-input">
             <input

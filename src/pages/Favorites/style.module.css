@@ -26,3 +26,11 @@
   justify-content: center;
   padding: 1rem;
 }
+
+.loading {
+  background-color: var(--white-95);
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+  width: 100%;
+}
